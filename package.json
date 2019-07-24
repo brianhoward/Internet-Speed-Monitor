@@ -1,0 +1,12 @@
+{
+  "name": "internet-speed-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./run.js"
+  },
+  "dependencies": {
+    "express": "~4.16.1",
+    "speedtest-net": "^1.5.1"
+  }
+}
