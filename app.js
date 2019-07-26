@@ -9,7 +9,8 @@ const speedTestWait = 3;
 // VARIABLES //
 ///////////////
 
-try { var speedTestData = require('./public/speedTestData.json'); } catch { var speedTestData = []; }
+let speedTestData = [];
+try { speedTestData = require('./public/speedTestData.json'); } catch { speedTestData = [] }
 
 ////////////////////////
 // IMPORTS & REQUIRES //
