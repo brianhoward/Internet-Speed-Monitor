@@ -80,7 +80,7 @@ const updateAvrages = (speedTestData) => {
 	let speedTestData = [];
 
 	try {
-		const response = await axios.get('/speedTestData.json');
+		const response = await axios.get('/api');
 		speedTestData = response.data;
 	} catch (err) {
 		console.error(err);
