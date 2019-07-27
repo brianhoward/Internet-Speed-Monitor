@@ -3,7 +3,7 @@
 //////////////
 
 // Number of minutes to wait between speed test runs
-const speedTestWait = 3;
+const speedTestWait = 15;
 
 ///////////////
 // VARIABLES //
@@ -39,7 +39,7 @@ app.use((req, res) => res.sendFile(`${__dirname}/public/index.html`));
 const runSpeedTest = async () => {
 	speedTest({maxTime: 5000}).on('data', async data => {
 		console.log(`${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()} - ${data.speeds.download}mb - ${data.speeds.upload}mb`);
-		speedTestData.push({ "data": Date.now(), "download": data.speeds.download, "upload": data.speeds.upload});
+		speedTestData.push({ "time": Date.now(), "download": data.speeds.download, "upload": data.speeds.upload});
 		await fs.writeFile('./public/speedTestData.json', JSON.stringify(speedTestData));
 	});
 };
@@ -52,7 +52,7 @@ console.log('Starting speed test...');
 console.log('');
 console.log('');
 console.log('----------------------------------------');
-console.log('- Date ------- Download ------- Upload -');
+console.log('- Time ------- Download ------- Upload -');
 console.log('----------------------------------------');
 runSpeedTest();
 setInterval(runSpeedTest, 1000*60*speedTestWait);

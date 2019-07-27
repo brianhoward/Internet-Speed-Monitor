@@ -3,6 +3,8 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
 	<script type="text/javascript" src="axios.js"></script>
+	<script type="text/javascript" src="moment.js"></script>
+	<script type="text/javascript" src="chart.js"></script>
 </head>
 <body>
 	<div id="cardContainer">
@@ -10,19 +12,33 @@
 		<div class="card">
 			<div class="cardName">24 Hour Average (Mbps)</div>
 			<div class="card_text">
-				<div class="24_upload">23</div>
-				<div class="24_slash">/</div>
-				<div class="24_download">45</div>
+				<div class="download_24h">88</div>
+				<div>/</div>
+				<div class="upload_24h">88</div>
 			</div>
 		</div>
 		<!-- 7D Average Download / Upload -->
-		<div class="card"></div>
+		<div class="card">
+			<div class="cardName">7 Day Average (Mbps)</div>
+			<div class="card_text">
+				<div class="download_7d">88</div>
+				<div>/</div>
+				<div class="upload_7d">88</div>
+			</div>
+		</div>
 		<!-- Something -->
-		<div class="card"></div>
+		<div class="card">
+			<div class="cardName">Full Average (Mbps)</div>
+			<div class="card_text">
+				<div class="download_full">88</div>
+				<div>/</div>
+				<div class="upload_full">88</div>
+			</div>
+		</div>
 	</div>
 	<!-- 7 Day Download / Upload Graph -->
 	<div id="chartContainer">
-
+		<canvas id="chart" style="width:100%;height:100%;"></canvas>
 	</div>
 	<!-- JS -->
 	<script type="text/javascript" src="javascript.js"></script>
