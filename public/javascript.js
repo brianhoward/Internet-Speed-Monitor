@@ -23,7 +23,7 @@ let averages = {
 		download: null
 	},
 	update(speedTestData) {
-		const time_24h = Date.now() - ((24 * 60 * 60 * 1000) * 1);
+		const time_24h = Date.now() - ((24 * 60 * 60 * 1000));
 		const time_7d = Date.now() - ((24 * 60 * 60 * 1000) * 7);
 
 		let temp_download_24h = [];
@@ -77,8 +77,7 @@ let averages = {
 	let speedTestData = [];
 
 	try {
-		const response = await axios.get('/api');
-		speedTestData = response.data;
+		({ data: speedTestData} = await axios.get('/api'));
 	} catch (err) {
 		console.error(err);
 	}

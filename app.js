@@ -3,7 +3,7 @@
 //////////////
 
 // Debug
-const debug = false;
+const debug = true;
 // Number of minutes to wait between speed test runs
 const speedTestWait = debug === false ? 15 : 0.5;
 
@@ -62,12 +62,12 @@ const speedTest = async () => {
 // INIT SPEED TEST //
 /////////////////////
 
-console.log('Starting speed test...');
-console.log('');
-console.log('');
-console.log('----------------------------------------');
-console.log('- Time ------- Download ------- Upload -');
-console.log('----------------------------------------');
+console.log('Starting speed test...\n' +
+			'\n'+
+			'\n'+
+			'----------------------------------------\n'+
+			'- Time ------- Download ------- Upload -\n'+
+			'----------------------------------------\n');
 speedTest();
 setInterval(speedTest, 1000*60*speedTestWait);
 
