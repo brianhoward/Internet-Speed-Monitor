@@ -3,6 +3,7 @@
 //////////////
 
 const updateTime = 15;
+let debug = false;
 
 ///////////////
 // VARIABLES //
@@ -45,7 +46,7 @@ let averages = {
 			temp_upload_full.push(speedTestData[i].upload);
 		}
 
-		const average = input => input.reduce((a, b) => a + b, 0) / input.length;
+		const average = arr => arr.reduce((a,b) => a + b, 0) / arr.length;
 		this['24h'].download = average(temp_download_24h);
 		this['24h'].upload = average(temp_upload_24h);
 		this['7d'].download = average(temp_download_7d);
