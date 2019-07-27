@@ -80,15 +80,15 @@ const updateAvrages = (speedTestData) => {
 	let speedTestData = [];
 
 	try {
-		// const response = await axios.get('/speedTestData.json');
-		// speedTestData = response.data;
+		const response = await axios.get('/speedTestData.json');
+		speedTestData = response.data;
 
 		// DEBUG
-		speedTestData = [{"time": 1564189666003, "download": 5.921, "upload": 7.391}, {
-			"time": 1564189667003,
-			"download": 15.921,
-			"upload": 3.391
-		}];
+		// speedTestData = [{"time": 1564189666003, "download": 5.921, "upload": 7.391}, {
+		// 	"time": 1564189667003,
+		// 	"download": 15.921,
+		// 	"upload": 3.391
+		// }];
 
 	} catch (error) {
 		console.error(error);
@@ -147,6 +147,5 @@ const updateAvrages = (speedTestData) => {
 			}
 		}
 	});
-
 
 })();
