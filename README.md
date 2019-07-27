@@ -6,6 +6,18 @@ Internet speed test application for tracking internet speeds over time utilizing
 
 [ ABOUT ]
 
-# Instillation & Setup
+# Required Libraries
 
-# Third Party Libraries
+## speedtest-cli
+
+# Optional Requirements
+
+## PM2
+
+## Yarn
+
+# Instillation
+
+# Setup
+
+# Third Party Libraries Used

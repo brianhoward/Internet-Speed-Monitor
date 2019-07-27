@@ -77,7 +77,6 @@ let averages = {
 
 	try {
 		const response = await axios.get('/api');
-		console.log(response);
 		speedTestData = response.data;
 	} catch (err) {
 		console.error(err);
