@@ -10,7 +10,7 @@ const speedTestWait = 15;
 ///////////////
 
 let speedTestData = [];
-try { speedTestData = require('./public/speedTestData.json'); } catch { speedTestData = [] }
+try { speedTestData = require('./public/database/speedTestData.json'); } catch { speedTestData = [] }
 
 ////////////////////////
 // IMPORTS & REQUIRES //
@@ -29,7 +29,7 @@ const speedTest = require('speedtest-net');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/api', (req, res, next) => res.sendFile(`${__dirname}/public/speedTestData.json`));
+app.use('/api', (req, res, next) => res.sendFile(`${__dirname}/public/database/speedTestData.json`));
 app.use((req, res) => res.sendFile(`${__dirname}/public/index.html`));
 
 ///////////////
@@ -40,7 +40,7 @@ const runSpeedTest = async () => {
 	speedTest({maxTime: 5000}).on('data', async data => {
 		console.log(`${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()} - ${data.speeds.download}mb - ${data.speeds.upload}mb`);
 		speedTestData.push({ "time": Date.now(), "download": data.speeds.download, "upload": data.speeds.upload});
-		await fs.writeFile('./public/speedTestData.json', JSON.stringify(speedTestData));
+		await fs.writeFile('./public/database/speedTestData.json', JSON.stringify(speedTestData));
 	});
 };
 

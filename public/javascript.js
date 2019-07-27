@@ -9,15 +9,15 @@ const updateTime = 15;
 ///////////////
 
 let averages = {
-	"24h": {
+	'24h': {
 		upload: null,
 		download: null
 	},
-	"7d": {
+	'7d': {
 		upload: null,
 		download: null
 	},
-	"full": {
+	'full': {
 		upload: null,
 		download: null
 	},
@@ -82,37 +82,29 @@ const updateAvrages = (speedTestData) => {
 	try {
 		const response = await axios.get('/speedTestData.json');
 		speedTestData = response.data;
-
-		// DEBUG
-		// speedTestData = [{"time": 1564189666003, "download": 5.921, "upload": 7.391}, {
-		// 	"time": 1564189667003,
-		// 	"download": 15.921,
-		// 	"upload": 3.391
-		// }];
-
-	} catch (error) {
-		console.error(error);
+	} catch (err) {
+		console.error(err);
 	}
 
 	averages.update(speedTestData);
 
 	new Chart(document.getElementById('chart').getContext('2d'), {
-		"type": "line",
-		"data": {
-			"datasets": [{
+		type: 'line',
+		data: {
+			datasets: [{
 				label: 'Download',
 				data: speedTestData.map(x => { return {x: new Date(x.time), y: x.download} }),
 				fill: false,
-				borderColor: "#2196f3"
+				borderColor: '#2196f3'
 			},{
 				label: 'Upload',
 				data: speedTestData.map(x => { return {x: new Date(x.time), y: x.upload} }),
 				fill: false,
-				borderColor: "#4caf50",
+				borderColor: '#4caf50',
 				pointRadius: 0
 			}]
 		},
-		"options": {
+		'options': {
 			responsive: true,
 			maintainAspectRatio: false,
 			title: {
