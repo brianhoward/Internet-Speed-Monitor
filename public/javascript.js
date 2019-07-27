@@ -67,10 +67,6 @@ let averages = {
 // FUNCTIONS //
 ///////////////
 
-const updateAvrages = (speedTestData) => {
-
-};
-
 /////////
 // RUN //
 /////////
@@ -81,6 +77,7 @@ const updateAvrages = (speedTestData) => {
 
 	try {
 		const response = await axios.get('/api');
+		console.log(response);
 		speedTestData = response.data;
 	} catch (err) {
 		console.error(err);
