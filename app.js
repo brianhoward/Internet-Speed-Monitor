@@ -4,6 +4,8 @@
 
 // Number of minutes to wait between speed test runs
 const speedTestWait = 15;
+// Debug
+const debug = false;
 
 ///////////////
 // VARIABLES //
@@ -20,7 +22,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const fs = require('fs').promises;
-const speedTest = require('speedtest-net');
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
 
 /////////////
 // EXPRESS //
@@ -36,12 +39,17 @@ app.use((req, res) => res.sendFile(`${__dirname}/public/index.html`));
 // FUNCTIONS //
 ///////////////
 
-const runSpeedTest = async () => {
-	speedTest({maxTime: 5000}).on('data', async data => {
-		console.log(`${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()} - ${data.speeds.download}mb - ${data.speeds.upload}mb`);
-		speedTestData.push({ "time": Date.now(), "download": data.speeds.download, "upload": data.speeds.upload});
+const speedTest = async () => {
+	try{
+		const { stdout } = await exec("speedtest-cli --simple");
+		const download = stdout.match(/Download: (.*?) Mbit\/s/i)[1];
+		const upload = stdout.match(/Upload: (.*?) Mbit\/s/i)[1];
+		console.log(`${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()} - ${download}mbps - ${upload}mbps`);
+		speedTestData.push({ "time": Date.now(), "download": download, "upload": upload});
 		await fs.writeFile('./public/database/speedTestData.json', JSON.stringify(speedTestData));
-	});
+	} catch (err) {
+		/not found/gi.test(err) ? console.log('SpeedTest-CLI not found. Please install SpeedTest-CLI from https://github.com/sivel/speedtest-cli') : console.log(err.stderr);
+	}
 };
 
 /////////////////////
@@ -54,11 +62,11 @@ console.log('');
 console.log('----------------------------------------');
 console.log('- Time ------- Download ------- Upload -');
 console.log('----------------------------------------');
-runSpeedTest();
-setInterval(runSpeedTest, 1000*60*speedTestWait);
+speedTest();
+setInterval(speedTest, 1000*60*speedTestWait);
 
-//
-//
-//
+////////////////////
+// EXPRESS EXPORT //
+////////////////////
 
 module.exports = app;
