@@ -16,7 +16,7 @@ const average = arr => (arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(1);
 
 const updatePage = async () => {
 	const {data: speedTestData} = await axios.get('/api');
-	const time_24h = Date.now() - ((24 * 60 * 60 * 1000));
+	const time_24h = Date.now() - (24 * 60 * 60 * 1000);
 	const time_7d = Date.now() - ((24 * 60 * 60 * 1000) * 7);
 
 	let dl24 = [], ul24 = [], dl7 = [], ul7 = [], dlF = [], ulF = [];
@@ -47,14 +47,14 @@ const updatePage = async () => {
 			datasets: [{
 				label: 'Download',
 				data: speedTestData.map(x => {
-					return {x: new Date(x.time), y: x.download}
+					return {x: new Date(x.time), y: x.download};
 				}),
 				fill: false,
 				borderColor: '#2196f3'
 			}, {
 				label: 'Upload',
 				data: speedTestData.map(x => {
-					return {x: new Date(x.time), y: x.upload}
+					return {x: new Date(x.time), y: x.upload};
 				}),
 				fill: false,
 				borderColor: '#4caf50',
