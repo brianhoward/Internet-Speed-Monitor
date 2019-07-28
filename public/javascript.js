@@ -3,7 +3,8 @@
 //////////////
 
 const updateTime = 15;
-const debug = true;
+const debug = false;
+const smoothing = 2;
 
 ///////////////
 // VARIABLES //
@@ -17,15 +18,20 @@ const average = arr => (arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(1);
 const smooth = obj => {
 	let smoothObj = [];
 	for(let i = 0; i < obj.length; i++){
-		if( i === 0 ){
-			smoothObj.push({ x: obj[i].x, y: obj[i].y });
-		} else if( i === 1 ){
-			smoothObj.push({ x: obj[i].x, y: ((obj[i -1].y + obj[i].y) / 2).toFixed(1) });
+		if( i < smoothing ){
+			smoothObj.push({ x: obj[i].x, y: ( sumRange(obj, i, i+1)  / (i+1)).toFixed(1) });
 		} else {
-			smoothObj.push({ x: obj[i].x, y: (( obj[i - 1].y + obj[i - 2].y + obj[i].y ) / 3).toFixed(1) });
+			smoothObj.push({ x: obj[i].x, y: ( sumRange(obj, i, smoothing+1)  / (smoothing+1)).toFixed(1) });
 		}
 	}
 	return smoothObj;
+};
+const sumRange = (obj, point, range) => {
+	let sum = 0;
+	for(let i = 0; i < range; i++){
+		sum += obj[point - i].y;
+	}
+	return sum;
 };
 
 const updatePage = async () => {
