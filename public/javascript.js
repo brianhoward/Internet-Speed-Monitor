@@ -13,12 +13,26 @@ const updateTime = 15;
 ///////////////
 
 const average = arr => (arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(1);
+const smooth = obj => {
+	let smoothObj = [];
+	for(let i = 0; i < obj.length; i++){
+		if( i === 0 ){
+			smoothObj.push({ x: obj[i].x, y: obj[i].y });
+		} else if( i === 1 ){
+			smoothObj.push({ x: obj[i].x, y: (obj[i -1].y + obj[i].y) / 2 });
+		} else {
+			smoothObj.push({ x: obj[i].x, y: ( obj[i - 1].y + obj[i - 2].y + obj[i].y ) / 3 });
+		}
+	}
+	return smoothObj;
+};
 
 const updatePage = async () => {
 	const {data: speedTestData} = await axios.get('/api');
 	const time_24h = Date.now() - (24 * 60 * 60 * 1000);
 	const time_7d = Date.now() - ((24 * 60 * 60 * 1000) * 7);
 
+	// ToDO: Simplify variables below
 	let dl24 = [], ul24 = [], dl7 = [], ul7 = [], dlF = [], ulF = [];
 
 	for (let i = 0; i < speedTestData.length; i++) {
@@ -34,6 +48,7 @@ const updatePage = async () => {
 		ulF.push(speedTestData[i].upload);
 	}
 
+	// ToDo: Simplify below block of code
 	document.querySelector('.dl24').innerText = average(dl24);
 	document.querySelector('.ul24').innerText = average(ul24);
 	document.querySelector('.dl7').innerText = average(dl7);
@@ -46,19 +61,15 @@ const updatePage = async () => {
 		data: {
 			datasets: [{
 				label: 'Download',
-				data: speedTestData.map(x => {
-					return {x: new Date(x.time), y: x.download};
-				}),
+				data: smooth(speedTestData.map(x => { return {x: new Date(x.time), y: x.download}; })),
 				fill: false,
 				borderColor: '#2196f3'
 			}, {
 				label: 'Upload',
-				data: speedTestData.map(x => {
-					return {x: new Date(x.time), y: x.upload};
-				}),
+				data: smooth(speedTestData.map(x => { return {x: new Date(x.time), y: x.upload}; })),
 				fill: false,
-				borderColor: '#4caf50',
-				pointRadius: 0
+				borderColor: '#4caf50'
+				// pointRadius: 0
 			}]
 		},
 		'options': {

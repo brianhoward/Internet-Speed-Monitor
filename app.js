@@ -3,7 +3,7 @@
 //////////////
 
 // Debug flag
-const debug = false;
+const debug = true;
 // Number of minutes to wait between speed test runs
 const speedTestWait = debug === false ? 15 : 0.5;
 
