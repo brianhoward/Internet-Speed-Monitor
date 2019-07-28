@@ -3,6 +3,7 @@
 //////////////
 
 const updateTime = 15;
+const debug = true;
 
 ///////////////
 // VARIABLES //
@@ -29,6 +30,9 @@ const smooth = obj => {
 
 const updatePage = async () => {
 	const {data: speedTestData} = await axios.get('/api');
+
+	if(debug) console.log(speedTestData);
+
 	const time_24h = Date.now() - (24 * 60 * 60 * 1000);
 	const time_7d = Date.now() - ((24 * 60 * 60 * 1000) * 7);
 
