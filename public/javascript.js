@@ -12,7 +12,7 @@ const updateTime = 15;
 // FUNCTIONS //
 ///////////////
 
-const average = arr => (arr.reduce((a,b) => a + b, 0) / arr.length).toFixed(1);
+const average = arr => (arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(1);
 
 const updatePage = async () => {
 	const {data: speedTestData} = await axios.get('/api');
@@ -46,12 +46,16 @@ const updatePage = async () => {
 		data: {
 			datasets: [{
 				label: 'Download',
-				data: speedTestData.map(x => { return {x: new Date(x.time), y: x.download} }),
+				data: speedTestData.map(x => {
+					return {x: new Date(x.time), y: x.download}
+				}),
 				fill: false,
 				borderColor: '#2196f3'
-			},{
+			}, {
 				label: 'Upload',
-				data: speedTestData.map(x => { return {x: new Date(x.time), y: x.upload} }),
+				data: speedTestData.map(x => {
+					return {x: new Date(x.time), y: x.upload}
+				}),
 				fill: false,
 				borderColor: '#4caf50',
 				pointRadius: 0
@@ -99,4 +103,4 @@ const updatePage = async () => {
 /////////
 
 updatePage();
-setInterval(updatePage, 1000*60*updateTime);
+setInterval(updatePage, 1000 * 60 * updateTime);
