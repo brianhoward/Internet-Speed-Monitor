@@ -63,13 +63,14 @@ const updatePage = async () => {
 				label: 'Download',
 				data: smooth(speedTestData.map(x => { return {x: new Date(x.time), y: x.download}; })),
 				fill: false,
-				borderColor: '#2196f3'
+				borderColor: '#2196f3',
+				pointRadius: 0
 			}, {
 				label: 'Upload',
 				data: smooth(speedTestData.map(x => { return {x: new Date(x.time), y: x.upload}; })),
 				fill: false,
-				borderColor: '#4caf50'
-				// pointRadius: 0
+				borderColor: '#4caf50',
+				pointRadius: 0
 			}]
 		},
 		'options': {
