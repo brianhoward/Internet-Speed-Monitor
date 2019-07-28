@@ -19,9 +19,9 @@ const smooth = obj => {
 		if( i === 0 ){
 			smoothObj.push({ x: obj[i].x, y: obj[i].y });
 		} else if( i === 1 ){
-			smoothObj.push({ x: obj[i].x, y: (obj[i -1].y + obj[i].y) / 2 });
+			smoothObj.push({ x: obj[i].x, y: ((obj[i -1].y + obj[i].y) / 2).toFixed(1) });
 		} else {
-			smoothObj.push({ x: obj[i].x, y: ( obj[i - 1].y + obj[i - 2].y + obj[i].y ) / 3 });
+			smoothObj.push({ x: obj[i].x, y: (( obj[i - 1].y + obj[i - 2].y + obj[i].y ) / 3).toFixed(1) });
 		}
 	}
 	return smoothObj;
