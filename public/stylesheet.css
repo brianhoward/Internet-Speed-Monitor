@@ -69,6 +69,7 @@ body {
 	margin: 0 0;
 	height: 100%;
 	width: 100%;
+    min-width: 100%;
     grid-area: chart;
 }
 
