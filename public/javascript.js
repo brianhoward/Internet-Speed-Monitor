@@ -3,86 +3,43 @@
 //////////////
 
 const updateTime = 15;
-let debug = false;
 
 ///////////////
 // VARIABLES //
 ///////////////
 
-let averages = {
-	'24h': {
-		upload: null,
-		download: null
-	},
-	'7d': {
-		upload: null,
-		download: null
-	},
-	'full': {
-		upload: null,
-		download: null
-	},
-	update(speedTestData) {
-		const time_24h = Date.now() - ((24 * 60 * 60 * 1000));
-		const time_7d = Date.now() - ((24 * 60 * 60 * 1000) * 7);
-
-		let temp_download_24h = [];
-		let temp_upload_24h = [];
-		let temp_download_7d = [];
-		let temp_upload_7d = [];
-		let temp_download_full = [];
-		let temp_upload_full = [];
-
-		for (let i = 0; i < speedTestData.length; i++) {
-			if (speedTestData[i].time >= time_24h) {
-				temp_download_24h.push(speedTestData[i].download);
-				temp_upload_24h.push(speedTestData[i].upload);
-			}
-			if (speedTestData[i].time >= time_7d) {
-				temp_download_7d.push(speedTestData[i].download);
-				temp_upload_7d.push(speedTestData[i].upload);
-			}
-			temp_download_full.push(speedTestData[i].download);
-			temp_upload_full.push(speedTestData[i].upload);
-		}
-
-		const average = arr => arr.reduce((a,b) => a + b, 0) / arr.length;
-		this['24h'].download = average(temp_download_24h);
-		this['24h'].upload = average(temp_upload_24h);
-		this['7d'].download = average(temp_download_7d);
-		this['7d'].upload = average(temp_upload_7d);
-		this['full'].download = average(temp_download_full);
-		this['full'].upload = average(temp_upload_full);
-
-		document.querySelector('.download_24h').innerText = this['24h'].download.toFixed(1);
-		document.querySelector('.upload_24h').innerText = this['24h'].upload.toFixed(1);
-		document.querySelector('.download_7d').innerText = this['7d'].download.toFixed(1);
-		document.querySelector('.upload_7d').innerText = this['7d'].upload.toFixed(1);
-		document.querySelector('.download_full').innerText = this['full'].download.toFixed(1);
-		document.querySelector('.upload_full').innerText = this['full'].upload.toFixed(1);
-
-	}
-};
-
 ///////////////
 // FUNCTIONS //
 ///////////////
 
-/////////
-// RUN //
-/////////
+const average = arr => (arr.reduce((a,b) => a + b, 0) / arr.length).toFixed(1);
 
-(async () => {
+const updatePage = async () => {
+	const {data: speedTestData} = await axios.get('/api');
+	const time_24h = Date.now() - ((24 * 60 * 60 * 1000));
+	const time_7d = Date.now() - ((24 * 60 * 60 * 1000) * 7);
 
-	let speedTestData = [];
+	let dl24 = [], ul24 = [], dl7 = [], ul7 = [], dlF = [], ulF = [];
 
-	try {
-		({ data: speedTestData} = await axios.get('/api'));
-	} catch (err) {
-		console.error(err);
+	for (let i = 0; i < speedTestData.length; i++) {
+		if (speedTestData[i].time >= time_24h) {
+			dl24.push(speedTestData[i].download);
+			ul24.push(speedTestData[i].upload);
+		}
+		if (speedTestData[i].time >= time_7d) {
+			dl7.push(speedTestData[i].download);
+			ul7.push(speedTestData[i].upload);
+		}
+		dlF.push(speedTestData[i].download);
+		ulF.push(speedTestData[i].upload);
 	}
 
-	averages.update(speedTestData);
+	document.querySelector('.dl24').innerText = average(dl24);
+	document.querySelector('.ul24').innerText = average(ul24);
+	document.querySelector('.dl7').innerText = average(dl7);
+	document.querySelector('.ul7').innerText = average(ul7);
+	document.querySelector('.dlF').innerText = average(dlF);
+	document.querySelector('.ulF').innerText = average(ulF);
 
 	new Chart(document.getElementById('chart').getContext('2d'), {
 		type: 'line',
@@ -135,5 +92,11 @@ let averages = {
 			}
 		}
 	});
+};
 
-})();
+/////////
+// RUN //
+/////////
+
+updatePage();
+setInterval(updatePage, 1000*60*updateTime);

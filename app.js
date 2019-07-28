@@ -67,7 +67,7 @@ console.log('Starting speed test...\n' +
 			'\n'+
 			'----------------------------------------\n'+
 			'- Time ------- Download ------- Upload -\n'+
-			'----------------------------------------\n');
+			'----------------------------------------');
 speedTest();
 setInterval(speedTest, 1000*60*speedTestWait);
 
