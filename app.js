@@ -1,4 +1,4 @@
-///////////////
+//////////////
 // SETTINGS //
 //////////////
 
@@ -22,12 +22,12 @@ try {
 // IMPORTS & REQUIRES //
 ////////////////////////
 
-const express = require('express'),
-	path = require('path'),
-	app = express(),
-	fs = require('fs').promises,
-	util = require('util'),
-	exec = util.promisify(require('child_process').exec);
+const express = require('express');
+const path = require('path');
+const app = express();
+const fs = require('fs').promises;
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
 
 /////////////
 // EXPRESS //
