@@ -1,16 +1,20 @@
-**APP CURRENTLY A WORK IN PROGRESS! PLEASE CHECK BACK LATER...**
+**APP CURRENTLY A WORK IN PROGRESS!**
 
 ![Internet Speed Monitor](README_FILES/title_image.png "Internet Speed Monitor")
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7094b86b2cc247e1959a393eb7320ea9)](https://www.codacy.com/app/brianhoward/internet-speed-monitor?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=brianhoward/internet-speed-monitor&amp;utm_campaign=Badge_Grade)
 
-Internet speed monitoring application for tracking internet download and upload speed in Mbps over time. This applicaion was written to be run continually on a Raspberry Pi, however there is no reason it cannot be run on another operating system or computer as long as it meets all the requirements outlined in the section below.
+This internet speed monitoring application is used to track download and upload speed, in Mbps, tested every X minutes utilizing the [speedtest.net](https://speedtest.net) API. This application is intended to run continually on a Raspberry Pi. However, there is no reason it cannot run on another operating system or computer as long as it meets all the requirements outlined in the section below.
 
 ![alt text](README_FILES/screencapture.png "Screen Capture")
 
 # Requirements
 
+## Python
+
 ## speedtest-cli
+
+## Node.js
 
 # Optional Requirements
 

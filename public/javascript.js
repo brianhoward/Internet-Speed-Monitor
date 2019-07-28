@@ -15,6 +15,11 @@ const smoothing = 2;
 ///////////////
 
 const average = arr => (arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(1);
+const sumRange = (obj, point, range) => {
+	let sum = 0;
+	for(let i = 0; i < range; i++) sum += obj[point - i].y;
+	return sum;
+};
 const smooth = obj => {
 	let smoothObj = [];
 	for(let i = 0; i < obj.length; i++){
@@ -23,11 +28,6 @@ const smooth = obj => {
 			smoothObj.push({ x: obj[i].x, y: ( sumRange(obj, i, smoothing+1)  / (smoothing+1)).toFixed(1) });
 	}
 	return smoothObj;
-};
-const sumRange = (obj, point, range) => {
-	let sum = 0;
-	for(let i = 0; i < range; i++) sum += obj[point - i].y;
-	return sum;
 };
 const updatePage = async () => {
 	const {data: speedTestData} = await axios.get('/api');
