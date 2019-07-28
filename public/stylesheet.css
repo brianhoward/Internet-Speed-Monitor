@@ -1,18 +1,23 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+
 body {
 	background-color: #212121;
-	font-size: 16px;
-	font-family: sans-serif;
-	box-sizing: border-box;
-	padding: 30px 30px;
-	margin: 0;
-	height: 100vh;
-	max-height: 100vh;
-	width: 100vw;
-	max-width: 100vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	overflow: hidden;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding: 30px 30px;
+    margin: 0;
+    height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-areas: "card0 card1 card2" "chart chart chart";
 }
 
 .card {
@@ -23,13 +28,19 @@ body {
 	padding: 5px;
 	position: relative;
 	box-shadow: 0 0 10px #000000;
-	margin: 0 10px;
+	margin: 0 0;
 }
 
-div#cardContainer {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
+.card:nth-of-type(0) {
+    grid-area: card0;
+}
+
+.card:nth-of-type(1) {
+    grid-area: card1;
+}
+
+.card:nth-of-type(2) {
+    grid-area: card2;
 }
 
 .card_text {
@@ -42,6 +53,7 @@ div#cardContainer {
 	font-size: calc(4vw + 1em);
 	position: absolute;
 	top: 0;
+	padding-top: 8px;
 }
 
 .cardName {
@@ -54,7 +66,25 @@ div#cardContainer {
 	border: 1px solid #555555;
 	padding: 5px;
 	box-shadow: 0 0 10px #000000;
-	margin: 20px 0;
+	margin: 0 0;
 	height: 100%;
-	max-height: 450px;
+	width: 100%;
+    grid-area: chart;
+}
+
+@media (max-width: 800px) {
+    body {
+        grid-template-areas: "card0" "card1" "card2" "chart";
+        grid-template-rows: auto auto auto 1fr;
+        grid-row-gap: 5px;
+        grid-column-gap: 5px;
+    }
+
+    .card {
+        max-height: 110px;
+    }
+
+    .card_text {
+        font-size: 3em;
+    }
 }
