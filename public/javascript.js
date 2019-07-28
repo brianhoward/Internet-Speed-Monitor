@@ -93,8 +93,7 @@ const updatePage = async () => {
 					},
 					ticks: {
 						major: {
-							fontStyle: 'bold',
-							fontColor: '#FF0000'
+							fontStyle: 'bold'
 						}
 					}
 				}],
