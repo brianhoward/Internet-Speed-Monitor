@@ -10,11 +10,19 @@ This internet speed monitoring application is used to track download and upload 
 
 # Requirements
 
+The following is required to be installed prier to the instillation and setup of this application.
+
 ## Python
+
+Python 2.* or 3.* is required to run speedtest-cli. While the Raspberry Pi, as well as most Linux operating systems, include Python pre-installed, Python is available for download from [python.org](https://www.python.org/).
 
 ## speedtest-cli
 
+speedtest-cli is an application for Python to run internet speed tests within the terminal and can be downloaded from [Github/sivel/speedtest-cli](https://github.com/sivel/speedtest-cli).
+
 ## Node.js
+
+Node.js is use to run this application and can be downloaded from [nodejs.org](https://nodejs.org/).
 
 # Optional Requirements
 
@@ -103,9 +111,10 @@ This software and / or project was developed using the following software and / 
 | [Console Emulator](LINK) | COMPANY | USAGE |
 | [Windows 10](LINK) | Microsoft | USAGE |
 | [GIT](LINK) | COMPANY | USAGE |
+| [Python](LINK) | COMPANY | Usage
 
 ## About Author & Contract
 
 About the author and contact information currently unavailable.
 
-`README.md last updated July 27, 2019`
+`README.md last updated July 29, 2019`
