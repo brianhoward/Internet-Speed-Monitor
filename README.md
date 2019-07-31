@@ -32,7 +32,21 @@ Node.js is use to run this application and can be downloaded from [nodejs.org](h
 
 # Instillation
 
+`npm install`
+
+or
+
+`yarn`
+
 # Setup
+
+# Running
+
+`npm start`
+
+or
+
+`yarn start`
 
 # Feature List
 
@@ -48,7 +62,9 @@ Known issue list currently unavailable.
 
 # Future Updates & Features
 
-Future updates and feature list currently unavailable.
+- Better smoothing algorithm for chart
+- Dynamic chart resolution based on chart's width
+- Auto updating
 
 # Settings
 

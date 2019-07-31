@@ -3,7 +3,6 @@
 //////////////
 
 const updateTime = 15;
-const smoothing = 2;
 // const debug = false;
 
 ///////////////
@@ -22,6 +21,7 @@ const sumRange = (obj, point, range) => {
 };
 const smooth = obj => {
 	let smoothObj = [];
+	let smoothing = Math.round( (new Date(obj[obj.length - 1].x).getTime() - new Date(obj[0].x).getTime() ) / 86400000) * 2;
 	for(let i = 0; i < obj.length; i++){
 		i < smoothing ?
 			smoothObj.push({ x: obj[i].x, y: ( sumRange(obj, i, i+1)  / (i+1)).toFixed(1) }) :
@@ -29,8 +29,17 @@ const smooth = obj => {
 	}
 	return smoothObj;
 };
+const reducer = obj => {
+	let reduce = [];
+	for(let i = 0; i < obj.length; i++){
+		i%2 === 0 ? reduce.push(obj[i]) : 0;
+
+	}
+	return reduce;
+};
 const updatePage = async () => {
-	const {data: speedTestData} = await axios.get('/api');
+	// const {data: speedTestData} = await axios.get('/api');
+	const {data: speedTestData} = await axios.get('http://192.168.1.250:3000/api');
 	const time24 = Date.now() - (24 * 60 * 60 * 1000);
 	const time7 = Date.now() - ((24 * 60 * 60 * 1000) * 7);
 
@@ -54,14 +63,14 @@ const updatePage = async () => {
 		type: 'line',
 		data: {
 			datasets: [{
-				label: 'Download',
+				label: 'Download (smoothed)',
 				data: smooth(speedTestData.map(x => { return {x: new Date(x.time), y: x.download}; })),
 				fill: false,
 				borderColor: '#2196f3',
 				pointRadius: 0
 			}, {
 				label: 'Upload',
-				data: smooth(speedTestData.map(x => { return {x: new Date(x.time), y: x.upload}; })),
+				data: smooth(reducer(reducer(speedTestData.map(x => { return {x: new Date(x.time), y: x.upload}; })))),
 				fill: false,
 				borderColor: '#4caf50',
 				pointRadius: 0
