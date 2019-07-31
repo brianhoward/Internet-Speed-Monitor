@@ -38,8 +38,8 @@ const reducer = obj => {
 	return reduce;
 };
 const updatePage = async () => {
-	// const {data: speedTestData} = await axios.get('/api');
-	const {data: speedTestData} = await axios.get('http://192.168.1.250:3000/api');
+	const {data: speedTestData} = await axios.get('/api');
+	// const {data: speedTestData} = await axios.get('http://192.168.1.250:3000/api');
 	const time24 = Date.now() - (24 * 60 * 60 * 1000);
 	const time7 = Date.now() - ((24 * 60 * 60 * 1000) * 7);
 
