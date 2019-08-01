@@ -39,7 +39,7 @@ const reducer = obj => {
 };
 const updatePage = async () => {
 	const {data: speedTestData} = await axios.get('/api');
-	// const {data: speedTestData} = await axios.get('http://192.168.1.250:3000/api');
+	// const {data: speedTestData} = await axios.get('http://speedtest.local/api');
 	const time24 = Date.now() - (24 * 60 * 60 * 1000);
 	const time7 = Date.now() - ((24 * 60 * 60 * 1000) * 7);
 
@@ -63,14 +63,14 @@ const updatePage = async () => {
 		type: 'line',
 		data: {
 			datasets: [{
-				label: 'Download (smoothed)',
+				label: 'Download',
 				data: smooth(speedTestData.map(x => { return {x: new Date(x.time), y: x.download}; })),
 				fill: false,
 				borderColor: '#2196f3',
 				pointRadius: 0
 			}, {
 				label: 'Upload',
-				data: smooth(reducer(reducer(speedTestData.map(x => { return {x: new Date(x.time), y: x.upload}; })))),
+				data: smooth(speedTestData.map(x => { return {x: new Date(x.time), y: x.upload}; })),
 				fill: false,
 				borderColor: '#4caf50',
 				pointRadius: 0
