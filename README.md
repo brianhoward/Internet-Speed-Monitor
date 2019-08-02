@@ -45,19 +45,21 @@ To start this application, run the following command in its root directory.
 or
 `yarn start`
 
-The user interface may be accessed from http://[IP ADDRESS]:3000 where [IP ADDRESS] is the IP address of the computer this application is running on.
+The user interface may be accessed from _http://[IP ADDRESS]:3000_ where _[IP ADDRESS]_ is the IP address of the computer this application is running on.
 
 # Feature List
 
-Feature list currently unavailable.
+**TO BE WRITTEN**
 
 # Changelog
 
-Change log currently unavailable.
+| Version | Updates & Changes |
+| --- | --- |
+| 1.0.0 | Initial release |
 
 # Known Issues
 
-List of known issues is currently unavailable.
+Currently, there are no known issues with this application.
 
 # Future Updates & Features
 
@@ -67,29 +69,81 @@ List of known issues is currently unavailable.
 
 # Settings
 
-Settings list currently unavailable.
+**TO BE WRITTEN**
 
 # Files
+
+**TO BE WRITTEN**
 
 The following files are available pre-run
 
 | File / Directory | Usage |
 | --- | --- |
-| FILE | USAGE |
+| ./.gitignore | USAGE |
+| ./app.js | USAGE |
+| ./CHANGELOG.md | USAGE |
+| ./CONTRIBUTING.md | USAGE |
+| ./LICENSE.md | USAGE |
+| ./package.json | USAGE |
+| ./README.md | USAGE |
+| ./run.js | USAGE |
+| ./public/ | USAGE |
+| ./public/index.html | USAGE |
+| ./public/javascript.js | USAGE |
+| ./public/stylesheet.css | USAGE |
+| ./public/database/ | USAGE |
+| ./public/database/.gitignore | USAGE |
+| ./public/lib/ | USAGE |
+| ./public/lib/axios.js | USAGE |
+| ./public/lib/chart.js | USAGE |
+| ./public/lib/moment.js | USAGE |
+| ./README_FILES/ | USAGE |
+| ./README_FILES/screencapture.png | USAGE |
+| ./README_FILES/title_image.png | USAGE |
 
 The following files are generated post-run
 
 | File / Directory | Usage |
 | --- | --- |
-| file | USAGE |
+| ./public/database/speedTestData.json | USAGE |
+
+# File Tree
+```
+./
+│   .gitignore
+│   app.js
+│   CHANGELOG.md
+│   CONTRIBUTING.md
+│   LICENSE.md
+│   package.json
+│   README.md
+│   run.js
+│
+├───public
+│   │   index.html
+│   │   javascript.js
+│   │   stylesheet.css
+│   │
+│   ├───database
+│   │       .gitignore
+│   │
+│   └───lib
+│           axios.js
+│           chart.js
+│           moment.js
+│
+└───README_FILES
+        screencapture.png
+        title_image.png
+```
 
 # Contributing
 
-Contributing guide currently unavailable.
+**TO BE WRITTEN**
 
 # FAQ
 
-FAQ currently unavailable.
+**TO BE WRITTEN**
 
 # License
 
@@ -109,13 +163,23 @@ _Permissions of this strongest copyleft license are conditioned on making availa
                               
 # Third Party I.P.
 
+**TO BE WRITTEN**
+
 The following third-party software, code, scripts, services, APIs, content, intellectual property, and other such material (the "I.P.") are used in this software and / or project and are in no way associated with the production, development, or maintenance of this software and/or project. The owners, developers, business, and/or associates of this software and/or project are not endorsing the use of the following software and/or services and are providing the list for reference purposes only.
 
 | Owner(s) | I.P. | Usage | License |
 | --- | --- | --- | --- |
-| Node.js Foundation / Joyent / Google | [Node.js](https://nodejs.org) | This software runs on Node.js and uses some built in Node.js libraries | License |
+| Node.js Foundation / Joyent / Google | [Node.js](https://nodejs.org) | This software runs on Node.js and uses some built in Node.js libraries | ? |
+| ? | Python | ? | ? |
+| ? | Axios | ? | ? |
+| ? | Chart | ? | ? |
+| ? | Moment | ? | ? |
+| ? | speedtest-cli | ? | ? |
+| ? | express | ? | ? |
 
 # Developed Using
+
+**TO BE WRITTEN**
 
 This software and/or project was developed using the following software and/or services. The owners, developers, business, and/or associates of this software and/or project are not endorsing the use of the following software and/or services and are providing the list for informational purposes only.
 
@@ -126,10 +190,10 @@ This software and/or project was developed using the following software and/or s
 | [Console Emulator](LINK) | COMPANY | USAGE |
 | [Windows 10](LINK) | Microsoft | USAGE |
 | [GIT](LINK) | COMPANY | USAGE |
-| [Python](LINK) | COMPANY | USAGE
+| [Python](LINK) | COMPANY | USAGE |
 
 ## About Author & Contract
 
 Information about the author and contact information is currently unavailable.
 
-`README.md last updated Aug. 1, 2019`
+`README.md last updated Aug. 2, 2019`
