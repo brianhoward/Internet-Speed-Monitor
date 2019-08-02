@@ -12,18 +12,18 @@ This internet speed monitoring application is used to track the download and upl
 
 The following are required to be installed before the installation and setup of this application.
 
-| Name | Description | Link |
-| --- | --- | --- |
-| Python | Python 2.* or 3.* is required to run speedtest-cli. While the Raspberry Pi, as well as most Linux operating systems, include Python pre-installed. | [python.org](https://www.python.org/)
-| speedtest-cli | speedtest-cli is a package for Python to run internet speed tests within the terminal via the speedtest.net API. | [Github/sivel/speedtest-cli](https://github.com/sivel/speedtest-cli) |
-| Node.js | Node.js is use to run this application. | [nodejs.org](https://nodejs.org/) |
+| Name          | Description                                                                                                                                        | Link                                                                 |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Python        | Python 2.* or 3.* is required to run speedtest-cli. While the Raspberry Pi, as well as most Linux operating systems, include Python pre-installed. | [python.org](https://www.python.org/)                                |
+| speedtest-cli | speedtest-cli is a package for Python to run internet speed tests within the terminal via the speedtest.net API.                                   | [Github/sivel/speedtest-cli](https://github.com/sivel/speedtest-cli) |
+| Node.js       | Node.js is use to run this application.                                                                                                            | [nodejs.org](https://nodejs.org/)                                    |
 
 # Optional Requirements
 
-| Name | Description | Link |
-| --- | --- | --- |
-| PM2 | PM2 is process manager for Node.js allowing for multiple Node.js applications to be easily run on a single computer as well as automatically starting applicants on boot of the computer. | [pm2.keymetrics.io](http://pm2.keymetrics.io/) |
-| Yarn | Yarn is a third-party package manager for Node.js that operates much like NPM. | [yarnpkg.com](https://yarnpkg.com/) |
+| Name | Description                                                                                                                                                                               | Link                                           |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| PM2  | PM2 is process manager for Node.js allowing for multiple Node.js applications to be easily run on a single computer as well as automatically starting applicants on boot of the computer. | [pm2.keymetrics.io](http://pm2.keymetrics.io/) |
+| Yarn | Yarn is a third-party package manager for Node.js that operates much like NPM.                                                                                                            | [yarnpkg.com](https://yarnpkg.com/)            |
 
 # Instillation
 
@@ -54,8 +54,8 @@ The user interface may be accessed from _http://[IP ADDRESS]:3000_ where _[IP AD
 # Changelog
 
 | Version | Updates & Changes |
-| --- | --- |
-| 1.0.0 | Initial release |
+| ------- | ----------------- |
+| 1.0.0   | Initial release   |
 
 # Known Issues
 
@@ -77,34 +77,34 @@ Currently, there are no known issues with this application.
 
 The following files are available pre-run
 
-| File / Directory | Usage |
-| --- | --- |
-| ./.gitignore | USAGE |
-| ./app.js | USAGE |
-| ./CHANGELOG.md | USAGE |
-| ./CONTRIBUTING.md | USAGE |
-| ./LICENSE.md | USAGE |
-| ./package.json | USAGE |
-| ./README.md | USAGE |
-| ./run.js | USAGE |
-| ./public/ | USAGE |
-| ./public/index.html | USAGE |
-| ./public/javascript.js | USAGE |
-| ./public/stylesheet.css | USAGE |
-| ./public/database/ | USAGE |
-| ./public/database/.gitignore | USAGE |
-| ./public/lib/ | USAGE |
-| ./public/lib/axios.js | USAGE |
-| ./public/lib/chart.js | USAGE |
-| ./public/lib/moment.js | USAGE |
-| ./README_FILES/ | USAGE |
+| File / Directory                 | Usage |
+| -------------------------------- | ----- |
+| ./.gitignore                     | USAGE |
+| ./app.js                         | USAGE |
+| ./CHANGELOG.md                   | USAGE |
+| ./CONTRIBUTING.md                | USAGE |
+| ./LICENSE.md                     | USAGE |
+| ./package.json                   | USAGE |
+| ./README.md                      | USAGE |
+| ./run.js                         | USAGE |
+| ./public/                        | USAGE |
+| ./public/index.html              | USAGE |
+| ./public/javascript.js           | USAGE |
+| ./public/stylesheet.css          | USAGE |
+| ./public/database/               | USAGE |
+| ./public/database/.gitignore     | USAGE |
+| ./public/lib/                    | USAGE |
+| ./public/lib/axios.js            | USAGE |
+| ./public/lib/chart.js            | USAGE |
+| ./public/lib/moment.js           | USAGE |
+| ./README_FILES/                  | USAGE |
 | ./README_FILES/screencapture.png | USAGE |
-| ./README_FILES/title_image.png | USAGE |
+| ./README_FILES/title_image.png   | USAGE |
 
 The following files are generated post-run
 
-| File / Directory | Usage |
-| --- | --- |
+| File / Directory                     | Usage |
+| ------------------------------------ | ----- |
 | ./public/database/speedTestData.json | USAGE |
 
 # File Tree
@@ -153,13 +153,13 @@ This software is licensed under GNU Affero General Public License v3.0. All thir
 
 _Permissions of this strongest copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. When a modified version is used to provide a service over a network, the complete source code of the modified version must be made available._
 
-| Permissions        | Limitations           | Conditions                     |
-| ------------------ | --------------------- | ------------------------------ |
-| ✔ Commercial use   | ❌ Liability          | ❗ License and copyright notice |
-| ✔ Modification     | ❌ Warranty           | ❗ State changes                |
-| ✔ Distribution     |                       | ❗ Disclose source              |
-| ✔ Patent use       |                       | ❗ Network use is distribution  |
-| ✔ Private use      |                       | ❗ Same license                 |
+| Permissions      | Limitations  | Conditions                     |
+| ---------------- | ------------ | ------------------------------ |
+| ✔ Commercial use | ❌ Liability | ❗ License and copyright notice |
+| ✔ Modification   | ❌ Warranty  | ❗ State changes                |
+| ✔ Distribution   |              | ❗ Disclose source              |
+| ✔ Patent use     |              | ❗ Network use is distribution  |
+| ✔ Private use    |              | ❗ Same license                 |
                               
 # Third Party I.P.
 
@@ -167,15 +167,15 @@ _Permissions of this strongest copyleft license are conditioned on making availa
 
 The following third-party software, code, scripts, services, APIs, content, intellectual property, and other such material (the "I.P.") are used in this software and / or project and are in no way associated with the production, development, or maintenance of this software and/or project. The owners, developers, business, and/or associates of this software and/or project are not endorsing the use of the following software and/or services and are providing the list for reference purposes only.
 
-| Owner(s) | I.P. | Usage | License |
-| --- | --- | --- | --- |
-| Node.js Foundation / Joyent / Google | [Node.js](https://nodejs.org) | This software runs on Node.js and uses some built in Node.js libraries | ? |
-| ? | Python | ? | ? |
-| ? | Axios | ? | ? |
-| ? | Chart | ? | ? |
-| ? | Moment | ? | ? |
-| ? | speedtest-cli | ? | ? |
-| ? | express | ? | ? |
+| Owner(s)                             | I.P.                          | Usage                                                                  | License |
+| ------------------------------------ | ----------------------------- | ---------------------------------------------------------------------- | ------- |
+| Node.js Foundation / Joyent / Google | [Node.js](https://nodejs.org) | This software runs on Node.js and uses some built in Node.js libraries | ?       |
+| ?                                    | Python                        | ?                                                                      | ?       |
+| ?                                    | Axios                         | ?                                                                      | ?       |
+| ?                                    | Chart                         | ?                                                                      | ?       |
+| ?                                    | Moment                        | ?                                                                      | ?       |
+| ?                                    | speedtest-cli                 | ?                                                                      | ?       |
+| ?                                    | express                       | ?                                                                      | ?       |
 
 # Developed Using
 
@@ -183,14 +183,14 @@ The following third-party software, code, scripts, services, APIs, content, inte
 
 This software and/or project was developed using the following software and/or services. The owners, developers, business, and/or associates of this software and/or project are not endorsing the use of the following software and/or services and are providing the list for informational purposes only.
 
-| Software / Service | Company | Usage |
-| --- | --- | --- |
-| [WebStorm](LINK) | COMPANY | USAGE |
+| Software / Service            | Company                              | Usage |
+| ----------------------------- | ------------------------------------ | ----- |
+| [WebStorm](LINK)              | COMPANY                              | USAGE |
 | [Node.js](https://nodejs.org) | Node.js Foundation / Joyent / Google | USAGE |
-| [Console Emulator](LINK) | COMPANY | USAGE |
-| [Windows 10](LINK) | Microsoft | USAGE |
-| [GIT](LINK) | COMPANY | USAGE |
-| [Python](LINK) | COMPANY | USAGE |
+| [Console Emulator](LINK)      | COMPANY                              | USAGE |
+| [Windows 10](LINK)            | Microsoft                            | USAGE |
+| [GIT](LINK)                   | COMPANY                              | USAGE |
+| [Python](LINK)                | COMPANY                              | USAGE |
 
 ## About Author & Contract
 
