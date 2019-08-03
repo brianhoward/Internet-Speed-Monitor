@@ -77,35 +77,35 @@ Currently, there are no known issues with this application.
 
 The following files are available pre-run
 
-| File / Directory                 | Usage |
-| -------------------------------- | ----- |
-| ./.gitignore                     | USAGE |
-| ./app.js                         | USAGE |
-| ./CHANGELOG.md                   | USAGE |
-| ./CONTRIBUTING.md                | USAGE |
-| ./LICENSE.md                     | USAGE |
-| ./package.json                   | USAGE |
-| ./README.md                      | USAGE |
-| ./run.js                         | USAGE |
-| ./public/                        | USAGE |
-| ./public/index.html              | USAGE |
-| ./public/javascript.js           | USAGE |
-| ./public/stylesheet.css          | USAGE |
-| ./public/database/               | USAGE |
-| ./public/database/.gitignore     | USAGE |
-| ./public/lib/                    | USAGE |
-| ./public/lib/axios.js            | USAGE |
-| ./public/lib/chart.js            | USAGE |
-| ./public/lib/moment.js           | USAGE |
-| ./README_FILES/                  | USAGE |
-| ./README_FILES/screencapture.png | USAGE |
-| ./README_FILES/title_image.png   | USAGE |
+| File / Directory                 | Usage                                               |
+| -------------------------------- | --------------------------------------------------- |
+| ./.gitignore                     | List of files to ignore when committing to git.     |
+| ./app.js                         | \_\_\_                                              |
+| ./CHANGELOG.md                   | Log of changes to this application.                 |
+| ./CONTRIBUTING.md                | Information about contributing to this application. |
+| ./LICENSE.md                     | Application License.                                |
+| ./package.json                   | Node.js packages and application meta data.         |
+| ./README.md                      | This file...                                        |
+| ./run.js                         | \_\_\_                                              |
+| ./public/                        | Folder containing publicly available files.         |
+| ./public/index.html              | \_\_\_                                              |
+| ./public/javascript.js           | \_\_\_                                              |
+| ./public/stylesheet.css          | \_\_\_                                              |
+| ./public/database/               | \_\_\_                                              |
+| ./public/database/.gitignore     | List of files to ignore when committing to git.     |
+| ./public/lib/                    | Folder containing third party libraries.            |
+| ./public/lib/axios.js            | \_\_\_                                              |
+| ./public/lib/chart.js            | \_\_\_                                              |
+| ./public/lib/moment.js           | \_\_\_                                              |
+| ./README_FILES/                  | Folder containing images use in README.md.          |
+| ./README_FILES/screencapture.png | \_\_\_                                              |
+| ./README_FILES/title_image.png   | \_\_\_                                              |
 
 The following files are generated post-run
 
-| File / Directory                     | Usage |
-| ------------------------------------ | ----- |
-| ./public/database/speedTestData.json | USAGE |
+| File / Directory                     | Usage                                                  |
+| ------------------------------------ | ------------------------------------------------------ |
+| ./public/database/speedTestData.json | Database in JSON format containing speed test results. |
 
 # File Tree
 ```
@@ -139,11 +139,11 @@ The following files are generated post-run
 
 # Contributing
 
-**TO BE WRITTEN**
+Please feel free to open issues for bugs you've found or features you think are missing. If you would like to contribute to this open source project, submit a pull requests to this repository for merge consideration.
 
 # FAQ
 
-**TO BE WRITTEN**
+Currently, there is no FAQ items to go here. If you have a question, please open an issue.
 
 # License
 
@@ -169,13 +169,13 @@ The following third-party software, code, scripts, services, APIs, content, inte
 
 | Owner(s)                             | I.P.                          | Usage                                                                  | License |
 | ------------------------------------ | ----------------------------- | ---------------------------------------------------------------------- | ------- |
-| Node.js Foundation / Joyent / Google | [Node.js](https://nodejs.org) | This software runs on Node.js and uses some built in Node.js libraries | ?       |
-| ?                                    | Python                        | ?                                                                      | ?       |
-| ?                                    | Axios                         | ?                                                                      | ?       |
-| ?                                    | Chart                         | ?                                                                      | ?       |
-| ?                                    | Moment                        | ?                                                                      | ?       |
-| ?                                    | speedtest-cli                 | ?                                                                      | ?       |
-| ?                                    | express                       | ?                                                                      | ?       |
+| Node.js Foundation / Joyent / Google | [Node.js](https://nodejs.org) | This software runs on Node.js and uses some built in Node.js libraries | \_\_\_  |
+| \_\_\_                               | Python                        | \_\_\_                                                                 | \_\_\_  |
+| \_\_\_                               | Axios                         | \_\_\_                                                                 | \_\_\_  |
+| \_\_\_                               | Chart                         | \_\_\_                                                                 | \_\_\_  |
+| \_\_\_                               | Moment                        | \_\_\_                                                                 | \_\_\_  |
+| \_\_\_                               | speedtest-cli                 | \_\_\_                                                                 | \_\_\_  |
+| \_\_\_                               | express                       | \_\_\_                                                                 | \_\_\_  |
 
 # Developed Using
 
@@ -186,11 +186,15 @@ This software and/or project was developed using the following software and/or s
 | Software / Service            | Company                              | Usage |
 | ----------------------------- | ------------------------------------ | ----- |
 | [WebStorm](LINK)              | COMPANY                              | USAGE |
+| [Atom](LINK)                  | COMPANY                              | USAGE |
 | [Node.js](https://nodejs.org) | Node.js Foundation / Joyent / Google | USAGE |
 | [Console Emulator](LINK)      | COMPANY                              | USAGE |
 | [Windows 10](LINK)            | Microsoft                            | USAGE |
 | [GIT](LINK)                   | COMPANY                              | USAGE |
 | [Python](LINK)                | COMPANY                              | USAGE |
+| [Dell XPS 15](LINK)           | COMPANY                              | USAGE |
+| [Intel ____](LINK)            | COMPANY                              | USAGE |
+| [_________](LINK)             | COMPANY                              | USAGE |
 
 ## About Author & Contract
 
