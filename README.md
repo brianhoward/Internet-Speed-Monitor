@@ -181,20 +181,20 @@ The following third-party software, code, scripts, services, APIs, content, inte
 
 **TO BE WRITTEN**
 
-This software and/or project was developed using the following software and/or services. The owners, developers, business, and/or associates of this software and/or project are not endorsing the use of the following software and/or services and are providing the list for informational purposes only.
+This software and/or project was originally developed using the following software and/or services. The owners, developers, business, and/or associates of this software and/or project are not endorsing the use of the following software and/or services and are providing the list for informational purposes only.
 
-| Software / Service            | Company                              | Usage |
-| ----------------------------- | ------------------------------------ | ----- |
-| [WebStorm](LINK)              | COMPANY                              | USAGE |
-| [Atom](LINK)                  | COMPANY                              | USAGE |
-| [Node.js](https://nodejs.org) | Node.js Foundation / Joyent / Google | USAGE |
-| [Console Emulator](LINK)      | COMPANY                              | USAGE |
-| [Windows 10](LINK)            | Microsoft                            | USAGE |
-| [GIT](LINK)                   | COMPANY                              | USAGE |
-| [Python](LINK)                | COMPANY                              | USAGE |
-| [Dell XPS 15](LINK)           | COMPANY                              | USAGE |
-| [Intel ____](LINK)            | COMPANY                              | USAGE |
-| [_________](LINK)             | COMPANY                              | USAGE |
+| Software / Service            | Company                              | Usage  |
+| ----------------------------- | ------------------------------------ | ------ |
+| [WebStorm](#)                 | \_\_\_                               | \_\_\_ |
+| [Atom](#)                     | \_\_\_                               | \_\_\_ |
+| [Node.js](https://nodejs.org) | Node.js Foundation / Joyent / Google | \_\_\_ |
+| [Console Emulator](#)         | \_\_\_                               | \_\_\_ |
+| [Windows 10](#)               | Microsoft                            | \_\_\_ |
+| [GIT](#)                      | \_\_\_                               | \_\_\_ |
+| [Python](#)                   | \_\_\_                               | \_\_\_ |
+| [Dell XPS 15](#)              | \_\_\_                               | \_\_\_ |
+| [Intel ____](#)               | \_\_\_                               | \_\_\_ |
+| [_________](#)                | \_\_\_                               | \_\_\_ |
 
 ## About Author & Contract
 
