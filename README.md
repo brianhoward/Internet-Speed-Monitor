@@ -169,32 +169,24 @@ The following third-party software, code, scripts, services, APIs, content, inte
 
 | Owner(s)                             | I.P.                          | Usage                                                                  | License |
 | ------------------------------------ | ----------------------------- | ---------------------------------------------------------------------- | ------- |
-| Node.js Foundation / Joyent / Google | [Node.js](https://nodejs.org) | This software runs on Node.js and uses some built in Node.js libraries | \_\_\_  |
-| \_\_\_                               | Python                        | \_\_\_                                                                 | \_\_\_  |
+| Node.js Foundation / Joyent / Google | [Node.js](https://nodejs.org) | This project runs on Node.js and uses some built in Node.js libraries. | \_\_\_  |
+| \_\_\_                               | Python                        | Python is used to run the speedtest-cli package.                       | \_\_\_  |
 | \_\_\_                               | Axios                         | \_\_\_                                                                 | \_\_\_  |
 | \_\_\_                               | Chart                         | \_\_\_                                                                 | \_\_\_  |
 | \_\_\_                               | Moment                        | \_\_\_                                                                 | \_\_\_  |
 | \_\_\_                               | speedtest-cli                 | \_\_\_                                                                 | \_\_\_  |
-| \_\_\_                               | express                       | \_\_\_                                                                 | \_\_\_  |
+| \_\_\_                               | Express                       | \_\_\_                                                                 | \_\_\_  |
 
 # Developed Using
 
-**TO BE WRITTEN**
-
 This software and/or project was originally developed using the following software and/or services. The owners, developers, business, and/or associates of this software and/or project are not endorsing the use of the following software and/or services and are providing the list for informational purposes only.
 
-| Software / Service            | Company                              | Usage  |
-| ----------------------------- | ------------------------------------ | ------ |
-| [WebStorm](#)                 | \_\_\_                               | \_\_\_ |
-| [Atom](#)                     | \_\_\_                               | \_\_\_ |
-| [Node.js](https://nodejs.org) | Node.js Foundation / Joyent / Google | \_\_\_ |
-| [Console Emulator](#)         | \_\_\_                               | \_\_\_ |
-| [Windows 10](#)               | Microsoft                            | \_\_\_ |
-| [GIT](#)                      | \_\_\_                               | \_\_\_ |
-| [Python](#)                   | \_\_\_                               | \_\_\_ |
-| [Dell XPS 15](#)              | \_\_\_                               | \_\_\_ |
-| [Intel ____](#)               | \_\_\_                               | \_\_\_ |
-| [_________](#)                | \_\_\_                               | \_\_\_ |
+| Software / Service                                                                               | Company   | Usage            |
+| ------------------------------------------------------------------------------------------------ | --------- | ---------------- |
+| [WebStorm](https://www.jetbrains.com/webstorm/)                                                  | JetBrains | Main IDE         |
+| [Atom](https://atom.io/)                                                                         | GitHub    | IDE              |
+| [Dell XPS 15](https://www.dell.com/en-us/shop/dell-laptops/xps-15-laptop/spd/xps-15-9570-laptop) | Dell      | Laptop computer  |
+| [Intel NUC NUC8i7HVK](https://simplynuc.com/8i7hvk-full/)                                        | Intel     | Desktop computer |
 
 ## About Author & Contract
 
