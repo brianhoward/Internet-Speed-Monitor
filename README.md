@@ -167,15 +167,15 @@ _Permissions of this strongest copyleft license are conditioned on making availa
 
 The following third-party software, code, scripts, services, APIs, content, intellectual property, and other such material (the "I.P.") are used in this software and / or project and are in no way associated with the production, development, or maintenance of this software and/or project. The owners, developers, business, and/or associates of this software and/or project are not endorsing the use of the following software and/or services and are providing the list for reference purposes only.
 
-| Owner(s)                             | I.P.                          | Usage                                                                  | License |
-| ------------------------------------ | ----------------------------- | ---------------------------------------------------------------------- | ------- |
-| Node.js Foundation / Joyent / Google | [Node.js](https://nodejs.org) | This project runs on Node.js and uses some built in Node.js libraries. | \_\_\_  |
-| \_\_\_                               | Python                        | Python is used to run the speedtest-cli package.                       | \_\_\_  |
-| \_\_\_                               | Axios                         | \_\_\_                                                                 | \_\_\_  |
-| \_\_\_                               | Chart                         | \_\_\_                                                                 | \_\_\_  |
-| \_\_\_                               | Moment                        | \_\_\_                                                                 | \_\_\_  |
-| \_\_\_                               | speedtest-cli                 | \_\_\_                                                                 | \_\_\_  |
-| \_\_\_                               | Express                       | \_\_\_                                                                 | \_\_\_  |
+| Owner(s)                                                                    | I.P.                                                    | Usage                                                                  | License |
+| --------------------------------------------------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------- | ------- |
+| Node.js Foundation / Joyent / Google                                        | [Node.js](https://nodejs.org)                           | This project runs on Node.js and uses some built in Node.js libraries. | \_\_\_  |
+| Python Software Foundation                                                  | [Python](https://www.python.org/)                       | Python is used to run the speedtest-cli package.                       | \_\_\_  |
+| Axios                                                                       | [Axios](https://github.com/axios/axios)                 | \_\_\_                                                                 | \_\_\_  |
+| Chart.js                                                                    | [Chart.js](https://www.chartjs.org/)                    | \_\_\_                                                                 | \_\_\_  |
+| Moment.js                                                                   | [Moment.js](https://momentjs.com/)                      | \_\_\_                                                                 | \_\_\_  |
+| Matt Martz (Sivel)                                                          | [speedtest-cli](https://github.com/sivel/speedtest-cli) | \_\_\_                                                                 | \_\_\_  |
+| Node.js Foundation / StrongLoop, IBM, and other Express contributors | [Express](https://expressjs.com/)                       | \_\_\_                                                                 | \_\_\_  |
 
 # Developed Using
 
