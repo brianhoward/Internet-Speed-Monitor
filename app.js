@@ -6,6 +6,8 @@
 const debug = false;
 // Number of minutes to wait between speed test runs
 const speedTestWait = debug === false ? 15 : 0.5;
+// Max days to log
+const maxDays = 45;
 
 ///////////////
 // VARIABLES //
@@ -54,6 +56,18 @@ const speedTest = async () => {
 		const upload = stdout.match(/Upload: (.*?) Mbit\/s/i)[1];
 		console.log(`${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()} - ${download}mbps - ${upload}mbps`);
 		speedTestData.push({time: Date.now(), download: +download, upload: +upload});
+
+		// Trim speedTestData to max days
+		let stop = speedTestData.length;
+		for(let i = 0; i < stop; i++){
+			if(speedTestData[i].time < Date.now() - (maxDays * 24 * 60 * 60 * 1000) ){
+				speedTestData.splice(i, 1);
+				console.log('Trimmed Data');
+				i--;
+				stop--;
+			}
+		}
+
 		await fs.writeFile('./public/database/speedTestData.json', JSON.stringify(speedTestData));
 	} catch (err) {
 		/not found/gi.test(err) ?
